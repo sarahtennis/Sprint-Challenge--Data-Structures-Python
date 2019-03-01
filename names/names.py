@@ -19,9 +19,11 @@ f.close()
 all_names = {}
 dups = {}
 
+# put all names from first file in dict
 for name in names_1:
     all_names[name] = True
 
+# check all names against first list dict, if same, put in dups dict
 for name in names_2:
     try:
         if all_names[name]:
