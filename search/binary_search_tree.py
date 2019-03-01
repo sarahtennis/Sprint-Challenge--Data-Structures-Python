@@ -5,8 +5,28 @@ class BinarySearchTree:
     self.right = None
 
   # start at root node, explore as far on each branch before back tracking
+  # root --> left subtree --> right subtree
+  # 1. Check if the current node is empty or null.
+  # 2. Display the data part of the root (or current node).
+  # 3. Traverse the left subtree by recursively calling the pre-order function.
+  # 4. Traverse the right subtree by recursively calling the pre-order function.
+  # HINT: want to utilize a Stack data structure
   def depth_first_for_each(self, cb):
-    pass    
+    def recursion(node):
+      if node.left:
+        stack.append(node.left)
+        recursion(node.left)
+      if node.right:
+        stack.append(node.right)
+        recursion(node.right)
+    
+    stack = [self]
+    recursion(self)
+
+    for node in stack:
+      cb(node.value)
+
+
 
   # call anon function on each in breadth first order
   # traverse nodes in order
