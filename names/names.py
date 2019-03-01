@@ -33,6 +33,17 @@ for name in names_2:
 
 duplicates = dups.keys()
 
+# ------ STRETCH ------
+# can only store names in lists -- RAM constraint stretch
+# intuitively, loop first list, inner loop second list ---> PROVIDED CODE
+# IDEAL: optimized with sub-quadratic runtime complexity and tightly constrained linear space complexity
+# --- NOTES ---
+# can use comparison operators (only useful if ordered lists)
+# >>> 'Sarah Tennis' > 'Jeffery Keilman'
+# True
+# could use O(log n) to sort first with binary?
+
+
 # PROVIDED CODE
 '''
 duplicates = []
